@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeatBot</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body, html {
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+    background: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    color: #111;
+  }
+
+  header {
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #4f46e5, #6366f1);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .logo { font-size: 1.6rem; letter-spacing: 1px; }
+  .contact { font-size: 0.9rem; }
+
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .main h1 {
+    font-size: 2.5rem;
+    color: #4f46e5;
+    margin-bottom: 20px;
+  }
+
+  .main p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 40px;
+    max-width: 500px;
+    line-height: 1.5;
+  }
+
+  .btn {
+    padding: 15px 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #4f46e5, #6366f1);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(79,70,229,0.3);
+  }
+
+  .btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+
+  @media(max-width:600px){
+    .main h1{ font-size: 2rem; }
+    .main p{ font-size: 1rem; }
+    .btn{ padding: 12px 30px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Beat Bot</div>
+  <div class="contact">From Camera to Victory</div>
+</header>
+
+<div class="main">
+  <h1>Welcome to Beat Bot!</h1>
+  <p>Play Rock-Paper-Scissors with our AI. Test your skills, have fun, and beat the AI!</p>
+  <button class="btn" onclick="startGame()">Start Game</button>
+</div>
+
+<script>
+function startGame(){
+  window.location.href = "/game";
+}
+</script>
+
+</body>
+</html>
